@@ -230,15 +230,20 @@ red1={
 # orange1和red1用來查詢行駛時間        
 
 print('歡迎來到高雄捷運查詢系統')
+
 print('以下為使用方式\n01查詢捷運所有站名\n02查詢所有景點\n03輸入站名可查詢周邊景點\n04輸入景點可查詢對應捷運站\n05輸入起訖站名及卡片類別可計算票價\n06輸入起訖站名可計算行駛時間\n07遺失物查詢\n')
 
 func = input('請輸入您要使用的功能代號')
+
 if (int(func) == 1):    
+    
     print(red.keys())
     print(orange.keys())
     #功能1是列出紅線和橘線所有捷運站
+    
      
 elif (int(func)==2):       
+        
         for station in red:
                 print(station)
                 print(red[station])
@@ -248,6 +253,7 @@ elif (int(func)==2):
         #功能2是列出紅線和橘線捷運站，下一行顯示周邊景點
 
 elif (int(func)==3):       
+        
         site1=input('請輸入站名即可顯示該站周邊景點')
         X = site1 in red
         Y = site1 in orange                
@@ -263,6 +269,7 @@ elif (int(func)==3):
                 print('查無此站')
 
 elif (int(func)==4):       
+        
         site2=input('輸入景點可查詢對應捷運站')
         A = site2 in searchred
         B = site2 in searchorange
@@ -278,6 +285,7 @@ elif (int(func)==4):
                 print('此景點不在查詢範圍')
 
 elif (int(func)==5):       
+        
         price=input('請輸入起訖站名，格式為起站-迄站，例：小港-中央公園')
         A = price in twenty
         B = price in twentyfive
@@ -397,6 +405,7 @@ elif (int(func)==5):
                 print('請重新輸入或洽詢站務人員')
 
 elif (int(func)==6):                                            
+        
         From=input('計算行駛時間：請輸入起站')
         Fromred = From in red1
         #使用者輸入的站名(From)為紅線捷運站，在red1集合中，該情況稱作Fromred
@@ -444,6 +453,7 @@ elif (int(func)==6):
                 print('查無此站')
         
 elif (int(func)==7):
+        
         item=input('請輸入您遺失的物品')
         class 外套:
                 def time(self):
